@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+	 <head>
+	 <title>BTEgame</title>
+	 <meta charset="utf-8">
+	 <link rel="icon" href="images/favicon.ico">
+	 <link rel="shortcut icon" href="images/favicon.ico" />
+	 <link rel="stylesheet" href="css/style.css">
+	 <link rel="stylesheet" href="css/slider.css">
+	 <script src="js/jquery.js"></script>
+	 <script src="js/jquery-migrate-1.1.1.js"></script>
+	 <script src="js/superfish.js"></script>
+	 <script src="js/jquery.equalheights.js"></script>
+	 <script src="js/jquery.easing.1.3.js"></script>
+	 <script src="js/tms-0.4.1.js"></script>
+	 <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	 <script type="text/javascript">
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+            center: [50.004531, 36.218661],
+            zoom: 5
+        }),
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [50.004531,36.218661]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: '11,8 %',
+                hintContent: '1224 запросов'
+            }
+        }, 
+        {
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#greenStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        } );
+    myMap.geoObjects
+        .add(myGeoObject)
+        .add(new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [50.450097, 30.52339]
+            },
+            properties: {
+            iconContent: '61,7 % ',
+                hintContent: '6413 запросов'
+            }  }, 
+        {
+            preset: 'islands#blueStretchyIcon',
+            draggable: true
+        } ))
+        .add(new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [48.464717, 35.046181]
+            },
+            properties: {
+            iconContent: '7,8 %',
+                hintContent: '811 запросов'
+            }  }, 
+        {
+            preset: 'islands#redStretchyIcon',
+            draggable: true
+        } ))
+        .add(new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [47.838796, 35.139561]
+            },
+            properties: {
+            iconContent: '4,9 % ',
+                hintContent: '513 запросов'
+            }  }, 
+        {
+            preset: 'islands#pinkStretchyIcon',
+            draggable: true
+        } ))
+        .add(new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [48.015877, 37.802850]
+            },
+            properties: {
+            iconContent: '4,0 % ',
+                hintContent: '413 запросов'
+            }  }, 
+        {
+            preset: 'islands#violetStretchyIcon',
+            draggable: true
+        } ))
+        .add(new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [49.444433, 32.059759]
+            },
+            properties: {
+            iconContent: '2,9 % ',
+                hintContent: '303 запросов'
+            }  }, 
+        {
+            preset: 'islands#yellowStretchyIcon',
+            draggable: true
+        } ))
+        .add(new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [50.798957, 33.553899]
+            },
+            properties: {
+            iconContent: '6,9 %',
+                hintContent: '713 запросов по другим городам Восточной Украины'
+            }  }, 
+        {
+            preset: 'islands#orangeStretchyIcon',
+            draggable: true
+        } ));
+}
+
+
+</script>
+	 <script>
+	
+	  $(window).load(function(){
+	  $('.slider')._TMS({
+			  show:0,
+			  pauseOnHover:false,
+			  prevBu:'.prev',
+			  nextBu:'.next',
+			  playBu:false,
+			  duration:800,
+			  preset:'fade', 
+			  pagination:true,//'.pagination',true,'<ul></ul>'
+			  pagNums:false,
+			  slideshow:8000,
+			  numStatus:false,
+			  banners:true,
+		  waitBannerAnimation:false,
+		progressBar:false
+	  })  
+	  });
+	  
+
+	 </script>
+	 <!--[if lt IE 8]>
+	   <div style=' clear: both; text-align:center; position: relative;'>
+		 <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+		   <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+		 </a>
+	  </div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	  <script src="js/html5shiv.js"></script>
+	  <link rel="stylesheet" media="screen" href="css/ie.css">
+
+	<![endif]-->
+	 </head>
+	 <body>
+<!--==============================header=================================-->
+ <header> 
+  <div class="container_12">
+	<div class="grid_12"> 
+	<h1><a href="index.html"><img src="images/logo.png" alt="Gerald Harris attorney at law"></a> </h1><div class="clear"></div>
+	
+		 <div class="menu_block">
+		   <nav  class="" >
+			<ul class="sf-menu">
+				   <li class="current"><a href="index.html">Главная</a></li>
+				   <li class="with_ul"><a href="index-1.html">Об игре </a></li><ul>
+											 </ul>
+				   <li><a href="index-3.html">Скачать</a></li>
+				   <li><a href="index-4.html">Контакты </a></li>
+				 </ul>
+			  </nav>
+		   <div class="clear"></div>
+		   </div>
+		   <div class="clear"></div>
+	  </div>
+	</div>
+</header>
+<div class="top_block">
+ <div class="slider-relative">
+	<div class="slider-block">
+	  <div class="slider">
+		<ul class="items">
+		  <li><img src="images/slide.jpg" alt="">
+			<div class="banner">Play and train<br>
+ Your brain</div>
+		  </li>
+		  <li><img src="images/slide1.jpg" alt="">
+			  <div class="banner">Find the<br>way to Earth</div>
+		  </li>
+		  <li><img src="images/slide2.jpg" alt="">
+			  <div class="banner">We will show you<br>
+all space</div>
+		  </li>
+		  <li><img src="images/slide3.jpg" alt="">
+			  <div class="banner">Be smart and<br>
+resourceful</div>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+
+ </div> 
+ 
+ </div>
+<!--=======content================================-->
+
+<div class="content page1"><div class="ic"></div>
+  <div class="container_12">
+	<div class="grid_3">
+	  <img src="images/page1_img5.png" alt="">
+	  <div class="text1">____Логика____</div>
+	  
+	  <a href="#"</a>
+	</div>
+	<div class="grid_3">
+	  <img src="images/page1_img6.png" alt="">
+	  <div class="text1">__Восприятие__</div>
+	  <br>
+	  <a href="#"</a>
+	</div>
+	<div class="grid_3">
+	  <img src="images/page1_img7.png" alt="">
+	  <div class="text1">___Реакция___</div>
+	  <br>
+	  <a href="#"> </a>
+	</div>
+	<div class="grid_3">
+	  <img src="images/page1_img8.png" alt="">
+	  <div class="text1">_____Счет_____</div>
+	  <br>
+	  <a href="#"></a>
+	</div>
+  </div>
+</div>
+<div class="bottom_block">
+  <div class="container_12">
+	<div class="grid_6">
+	 
+	  </ul>
+	</div>
+	<div class="grid_5">
+	  <h4><p>Играй!</p>
+	  <p>Побеждай!</p>
+	  <p>Развивайся!</p> 
+	     Развлекайся!</h4>
+	  
+	</div>
+  </div>
+</div>
+<!--==============================footer=================================-->
+<footer>	
+
+ <h1><center>Новости</center></h1>
+ 
+ <h3><center>Немного статистики</center></h3>
+
+   <div align="center">
+   
+  
+    <div  id="map" style="width:600px; height:400px"></div>
+     </div>
+	 <div align="center">
+	 	<p class="p1"></p> <p>Возвращаясь к концепциям и целям нашей игры, мы решили выяснить,</p>  <p> а на сколько же жители некоторых областей Украины интересуются темами</p>  <p>о логике, математике и других развивающих науках?</p> <p> Как выяснилось, в последнее время людей все чаще и чаще стали интересовать подобные вопросы. </p> <p>Так, например, число запросов об уровне IQ, по сравнению с прошлым годом, возросло более, чем на 22%. </p><p>Что ж, друзья, давайте следовать тем же курсом также активно, как наш отважный герой к своей мечте, и у нас непременно все получится!</div> </div>
+		 
+		 </p>
+  <div class="container_5">
+	<div class="grid_12">
+
+	
+<span>Copyright © 2015</span>
+<a href="#">Alina &amp; Katerina</a>
+
+	</div>
+	
+	<div class="clear"></div>
+  </div>
+</footer>
+</body>
+</html>
